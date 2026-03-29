@@ -13,7 +13,7 @@ on:
 
 # 配置你的 Gitee 仓库信息
 env:
-  GITEE_OWNER: 'QuantumNous'  # 修改为你的 Gitee 用户名
+  GITEE_OWNER: 'cinagroup'  # 修改为你的 Gitee 用户名
   GITEE_REPO: 'cinatoken'                # 修改为你的 Gitee 仓库名
 
 jobs:

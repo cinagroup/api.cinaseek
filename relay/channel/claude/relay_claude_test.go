@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/cinagroup/cinatoken/dto"
 )
 
 func TestFormatClaudeResponseInfo_MessageStart(t *testing.T) {

@@ -10,10 +10,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/cinagroup/cinatoken/constant"
+	"github.com/cinagroup/cinatoken/logger"
+	"github.com/cinagroup/cinatoken/model"
+	"github.com/cinagroup/cinatoken/service"
 
 	"github.com/gin-gonic/gin"
 )
