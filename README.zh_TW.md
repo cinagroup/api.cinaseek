@@ -1,8 +1,8 @@
 <div align="center">
 
-![new-api](/web/public/logo.png)
+![cinatoken](/web/public/logo.png)
 
-# New API
+# CinaToken
 
 🍥 **新一代大模型網關與AI資產管理系統**
 
@@ -15,30 +15,30 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Calcium-Ion/new-api/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Calcium-Ion/new-api?color=brightgreen" alt="license">
+  <a href="https://raw.githubusercontent.com/cinagroup/cinatoken/main/LICENSE">
+    <img src="https://img.shields.io/github/license/cinagroup/cinatoken?color=brightgreen" alt="license">
   </a>
-  <a href="https://github.com/Calcium-Ion/new-api/releases/latest">
-    <img src="https://img.shields.io/github/v/release/Calcium-Ion/new-api?color=brightgreen&include_prereleases" alt="release">
+  <a href="https://github.com/cinagroup/cinatoken/releases/latest">
+    <img src="https://img.shields.io/github/v/release/cinagroup/cinatoken?color=brightgreen&include_prereleases" alt="release">
   </a>
-  <a href="https://hub.docker.com/r/CalciumIon/new-api">
+  <a href="https://hub.docker.com/r/cinagroup/cinatoken">
     <img src="https://img.shields.io/badge/docker-dockerHub-blue" alt="docker">
   </a>
-  <a href="https://goreportcard.com/report/github.com/Calcium-Ion/new-api">
-    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/new-api" alt="GoReportCard">
+  <a href="https://goreportcard.com/report/github.com/cinagroup/cinatoken">
+    <img src="https://goreportcard.com/badge/github.com/cinagroup/cinatoken" alt="GoReportCard">
   </a>
 </p>
 
 <p align="center">
   <a href="https://trendshift.io/repositories/20180" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/20180" alt="QuantumNous%2Fnew-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+    <img src="https://trendshift.io/api/badge/repositories/20180" alt="cinagroup%2Fcinatoken | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
   </a>
   <br>
-  <a href="https://hellogithub.com/repository/QuantumNous/new-api" target="_blank">
+  <a href="https://hellogithub.com/repository/cinagroup/cinatoken" target="_blank">
     <img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=539ac4217e69431684ad4a0bab768811&claim_uid=tbFPfKIDHpc4TzR" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" />
   </a>
-  <a href="https://www.producthunt.com/products/new-api/launches/new-api?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-new-api" target="_blank" rel="noopener noreferrer">
-    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1047693&theme=light&t=1769577875005" alt="New API - All-in-one AI asset management gateway. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+  <a href="https://www.producthunt.com/products/cinatoken/launches/cinatoken?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-cinatoken" target="_blank" rel="noopener noreferrer">
+    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1047693&theme=light&t=1769577875005" alt="CinaToken - All-in-one AI asset management gateway. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
   </a>
 </p>
 
@@ -90,13 +90,13 @@
 ## 🙏 特別鳴謝
 
 <p align="center">
-  <a href="https://www.jetbrains.com/?from=new-api" target="_blank">
+  <a href="https://www.jetbrains.com/?from=cinatoken" target="_blank">
     <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo" width="120" />
   </a>
 </p>
 
 <p align="center">
-  <strong>感謝 <a href="https://www.jetbrains.com/?from=new-api">JetBrains</a> 為本項目提供免費的開源開發許可證</strong>
+  <strong>感謝 <a href="https://www.jetbrains.com/?from=cinatoken">JetBrains</a> 為本項目提供免費的開源開發許可證</strong>
 </p>
 
 ---
@@ -107,8 +107,8 @@
 
 ```bash
 # 複製項目
-git clone https://github.com/QuantumNous/new-api.git
-cd new-api
+git clone https://github.com/cinagroup/cinatoken.git
+cd cinatoken
 
 # 編輯 docker-compose.yml 配置
 nano docker-compose.yml
@@ -122,22 +122,22 @@ docker-compose up -d
 
 ```bash
 # 拉取最新鏡像
-docker pull calciumion/new-api:latest
+docker pull calciumion/cinatoken:latest
 
 # 使用 SQLite（預設）
-docker run --name new-api -d --restart always \
+docker run --name cinatoken -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  calciumion/cinatoken:latest
 
 # 使用 MySQL
-docker run --name new-api -d --restart always \
+docker run --name cinatoken -d --restart always \
   -p 3000:3000 \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  calciumion/cinatoken:latest
 ```
 
 > **💡 提示：** `-v ./data:/data` 會將數據保存在當前目錄的 `data` 資料夾中，你也可以改為絕對路徑如 `-v /your/custom/path:/data`
@@ -156,7 +156,7 @@ docker run --name new-api -d --restart always \
 
 <div align="center">
 
-### 📖 [官方文件](https://docs.newapi.pro/zh/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QuantumNous/new-api)
+### 📖 [官方文件](https://docs.newapi.pro/zh/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/cinagroup/cinatoken)
 
 </div>
 
@@ -199,7 +199,7 @@ docker run --name new-api -d --restart always \
 - 🤖 LinuxDO 授權登錄
 - 📱 Telegram 授權登錄
 - 🔑 OIDC 統一認證
-- 🔍 Key 查詢使用額度（配合 [neko-api-key-tool](https://github.com/Calcium-Ion/neko-api-key-tool)）
+- 🔍 Key 查詢使用額度（配合 [neko-api-key-tool](https://github.com/cinagroup/neko-api-key-tool)）
 
 ### 🚀 高級功能
 
@@ -288,7 +288,7 @@ docker run --name new-api -d --restart always \
 ## 🚢 部署
 
 > [!TIP]
-> **最新版 Docker 鏡像：** `calciumion/new-api:latest`
+> **最新版 Docker 鏡像：** `calciumion/cinatoken:latest`
 
 ### 📋 部署要求
 
@@ -315,12 +315,12 @@ docker run --name new-api -d --restart always \
 | `AZURE_DEFAULT_API_VERSION` | Azure API 版本                                                 | `2025-04-01-preview` |
 | `ERROR_LOG_ENABLED` | 錯誤日誌開關                                                       | `false` |
 | `PYROSCOPE_URL` | Pyroscope 服務位址                                            | - |
-| `PYROSCOPE_APP_NAME` | Pyroscope 應用名                                        | `new-api` |
+| `PYROSCOPE_APP_NAME` | Pyroscope 應用名                                        | `cinatoken` |
 | `PYROSCOPE_BASIC_AUTH_USER` | Pyroscope Basic Auth 用戶名                        | - |
 | `PYROSCOPE_BASIC_AUTH_PASSWORD` | Pyroscope Basic Auth 密碼                  | - |
 | `PYROSCOPE_MUTEX_RATE` | Pyroscope mutex 採樣率                               | `5` |
 | `PYROSCOPE_BLOCK_RATE` | Pyroscope block 採樣率                               | `5` |
-| `HOSTNAME` | Pyroscope 標籤裡的主機名                                          | `new-api` |
+| `HOSTNAME` | Pyroscope 標籤裡的主機名                                          | `cinatoken` |
 
 📖 **完整配置：** [環境變數文件](https://docs.newapi.pro/zh/docs/installation/config-maintenance/environment-variables)
 
@@ -333,8 +333,8 @@ docker run --name new-api -d --restart always \
 
 ```bash
 # 複製項目
-git clone https://github.com/QuantumNous/new-api.git
-cd new-api
+git clone https://github.com/cinagroup/cinatoken.git
+cd cinatoken
 
 # 編輯配置
 nano docker-compose.yml
@@ -350,21 +350,21 @@ docker-compose up -d
 
 **使用 SQLite：**
 ```bash
-docker run --name new-api -d --restart always \
+docker run --name cinatoken -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  calciumion/cinatoken:latest
 ```
 
 **使用 MySQL：**
 ```bash
-docker run --name new-api -d --restart always \
+docker run --name cinatoken -d --restart always \
   -p 3000:3000 \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  calciumion/cinatoken:latest
 ```
 
 > **💡 路徑說明：**
@@ -413,8 +413,8 @@ docker run --name new-api -d --restart always \
 
 | 項目 | 說明 |
 |------|------|
-| [neko-api-key-tool](https://github.com/Calcium-Ion/neko-api-key-tool) | Key 額度查詢工具 |
-| [new-api-horizon](https://github.com/Calcium-Ion/new-api-horizon) | New API 高性能優化版 |
+| [neko-api-key-tool](https://github.com/cinagroup/neko-api-key-tool) | Key 額度查詢工具 |
+| [cinatoken-horizon](https://github.com/cinagroup/cinatoken-horizon) | CinaToken 高性能優化版 |
 
 ---
 
@@ -454,7 +454,7 @@ docker run --name new-api -d --restart always \
 
 <div align="center">
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Calcium-Ion/new-api&type=Date)](https://star-history.com/#Calcium-Ion/new-api&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=cinagroup/cinatoken&type=Date)](https://star-history.com/#cinagroup/cinatoken&Date)
 
 </div>
 
@@ -462,12 +462,12 @@ docker run --name new-api -d --restart always \
 
 <div align="center">
 
-### 💖 感謝使用 New API
+### 💖 感謝使用 CinaToken
 
 如果這個項目對你有幫助，歡迎給我們一個 ⭐️ Star！
 
-**[官方文件](https://docs.newapi.pro/zh/docs)** • **[問題回饋](https://github.com/Calcium-Ion/new-api/issues)** • **[最新發布](https://github.com/Calcium-Ion/new-api/releases)**
+**[官方文件](https://docs.newapi.pro/zh/docs)** • **[問題回饋](https://github.com/cinagroup/cinatoken/issues)** • **[最新發布](https://github.com/cinagroup/cinatoken/releases)**
 
-<sub>Built with ❤️ by QuantumNous</sub>
+<sub>Built with ❤️ by cinagroup</sub>
 
 </div>
