@@ -249,7 +249,7 @@ const OtherSetting = () => {
             Accept: 'application/json',
             'Content-Type': 'application/json',
             // Adding User-Agent which is often required by GitHub API
-            'User-Agent": "cinatoken-update-checker',
+            'User-Agent': 'cinatoken-update-checker',
           },
         },
       ).then((response) => response.json());

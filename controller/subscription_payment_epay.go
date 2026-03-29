@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/cinagroup/go-epay/epay"
+	"github.com/Calcium-Ion/go-epay/epay"
 	"github.com/cinagroup/cinatoken/common"
 	"github.com/cinagroup/cinatoken/model"
 	"github.com/cinagroup/cinatoken/service"

@@ -16,7 +16,7 @@ import (
 	"github.com/cinagroup/cinatoken/setting/operation_setting"
 	"github.com/cinagroup/cinatoken/setting/system_setting"
 
-	"github.com/cinagroup/go-epay/epay"
+	"github.com/Calcium-Ion/go-epay/epay"
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"
 	"github.com/shopspring/decimal"
