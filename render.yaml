@@ -1,0 +1,53 @@
+# Render.com 部署配置
+# 文档：https://render.com/docs/render-yaml-spec
+
+services:
+  # CinaToken 主服务
+  - type: web
+    name: cinatoken
+    env: docker
+    region: oregon
+    plan: starter
+    branch: cinatoken
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/status
+    envVars:
+      - key: TZ
+        value: Asia/Shanghai
+      - key: SQL_DSN
+        fromDatabase:
+          name: cinatoken-db
+          property: connectionString
+      - key: REDIS_CONN_STRING
+        fromService:
+          type: redis
+          name: cinatoken-redis
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ERROR_LOG_ENABLED
+        value: "true"
+      - key: BATCH_UPDATE_ENABLED
+        value: "true"
+      - key: STREAMING_TIMEOUT
+        value: "300"
+    disk:
+      name: cinatoken-data
+      mountPath: /data
+      sizeGB: 5
+
+  # Redis 缓存服务
+  - type: redis
+    name: cinatoken-redis
+    plan: starter
+    region: oregon
+    maxmemoryPolicy: noeviction
+
+databases:
+  # PostgreSQL 数据库
+  - name: cinatoken-db
+    region: oregon
+    plan: starter
+    postgresMajorVersion: 15
+    diskSizeGB: 10
