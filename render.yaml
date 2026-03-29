@@ -43,6 +43,9 @@ services:
     plan: starter
     region: oregon
     maxmemoryPolicy: noeviction
+    ipAllowList:
+      - source: 0.0.0.0/0
+        description: Allow all IP addresses (internal services)
 
 databases:
   # PostgreSQL 数据库
@@ -51,3 +54,6 @@ databases:
     plan: starter
     postgresMajorVersion: 15
     diskSizeGB: 10
+    ipAllowList:
+      - source: 0.0.0.0/0
+        description: Allow all IP addresses (internal services)
